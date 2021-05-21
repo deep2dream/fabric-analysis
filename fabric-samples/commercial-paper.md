@@ -26,5 +26,6 @@ nvm run node --version
 
 [switch to specific version]
 nvm exec 4.2 node --version
+nvm use node
 
 ```
