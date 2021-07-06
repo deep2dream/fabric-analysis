@@ -1,4 +1,6 @@
 - https://github.com/hyperledger/fabric-samples/tree/main/chaincode/fabcar/external
+- https://blog.csdn.net/bean_business/article/details/109079641
+- https://github.com/hyperledger/fabric-samples/blob/v2.1.1/test-network/scripts/deployCC.sh
 ```
 cd github.com/hyperledger/fabric-samples/chaincode/fabcar/external
 cp chaincode.env.example chaincode.env
