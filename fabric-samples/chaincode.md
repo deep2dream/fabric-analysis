@@ -14,6 +14,14 @@ docker run -it --rm --name fabcar.org1.example.com --hostname fabcar.org1.exampl
 ```
 - initialize network
 ```
+export PATH=$PATH:$GOPATH/src/github.com/hyperledger/fabric-samples/bin
+export FABRIC_CFG_PATH=$GOPATH/src/github.com/hyperledger/fabric-samples/config
+
+[change]
+cd github.com/hyperledger/fabric-samples
+git checkout v2.3.0
+repl '--channel-id' '--channelID/' test-network/scripts
+
 cd test-network
 ./network.sh up -ca
 ./network.sh createChannel
