@@ -12,3 +12,10 @@ docker build -t hyperledger/fabcar-sample .
 docker run -it --rm --name fabcar.org1.example.com --hostname fabcar.org1.example.com --env-file chaincode.env --network=net_test hyperledger/fabcar-sample
 
 ```
+- initialize network
+```
+cd test-network
+./network.sh up -ca
+./network.sh createChannel
+./network.sh deployCC
+```
