@@ -20,7 +20,7 @@ export FABRIC_CFG_PATH=$GOPATH/src/github.com/hyperledger/fabric-samples/config
 [change]
 cd github.com/hyperledger/fabric-samples
 git checkout v2.3.0
-repl '--channel-id' '--channelID/' test-network/scripts
+repl '--channel-id ' '--channelID=' test-network/scripts
 
 cd test-network
 ./network.sh up -ca
