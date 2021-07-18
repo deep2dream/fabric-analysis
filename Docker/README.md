@@ -11,6 +11,21 @@ node:12.13.0-alpine
 - https://github.com/ekalinin/nodeenv
 - https://github.com/mhart/alpine-node
 - https://hub.docker.com/r/hyperledger/fabric-nodeenv/tags?page=1&ordering=last_updated
+- https://hub.docker.com/layers/hyperledger/fabric-nodeenv/2.3/images/sha256-e96a9e421159d2ae1153acae9fbb96e6008f6615b08631b5a91be4d8e9318bab?context=explore
+```
+ADD file ... in /
+CMD ["/bin/sh"]
+ENV NODE_VERSION=12.16.1
+/bin/sh -c addgroup -g 1000
+ENV YARN_VERSION=1.22.0
+/bin/sh -c apk add --no-cache
+COPY file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce in /usr/local/bin/
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["node"]
+/bin/sh -c apk add --no-cache
+/bin/sh -c mkdir -p /chaincode/input
+ADD multi:39d7a627530cb57b58d694a097ddd8f21e741079f2930c8567ff1d63ee196de9 in /chaincode/
+```
 - https://hub.docker.com/_/node/
 - https://github.com/nodejs/docker-node/blob/ce3bb541693325ee21e38184873ceb4364b3e6f4/16/alpine3.11/Dockerfile
 ```
