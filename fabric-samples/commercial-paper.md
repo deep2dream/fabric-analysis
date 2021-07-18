@@ -23,9 +23,15 @@ nvm install 10.15.3
 
 [check running version]
 nvm run node --version
+node --version
 
-[switch to specific version]
+[run specific version]
 nvm exec 4.2 node --version
+
+[sw]
+nvm use 12.16.1
+
+[latest]
 nvm use node
 
 ```
