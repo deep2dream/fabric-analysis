@@ -4,6 +4,8 @@
 -  Install the CLI tools
 ```
 nvm install 8.9.0
+npm config set user 0
+npm config set unsafe-perm true
 [online]
 npm install -g composer-cli@0.20
 npm install -g composer-rest-server@0.20
