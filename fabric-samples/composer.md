@@ -3,6 +3,7 @@
 ## Install
 -  Install the CLI tools
 ```
+nvm install 8.9.0
 [online]
 npm install -g composer-cli@0.20
 npm install -g composer-rest-server@0.20
