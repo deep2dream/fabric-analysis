@@ -10,7 +10,7 @@ npm config set unsafe-perm true
 npm install -g composer-cli@0.20
 npm install -g composer-rest-server@0.20
 npm install -g generator-hyperledger-composer@0.20
-npm install -g yo
+npm install -g yo@3.1.1
 
 [offline]
 npm v composer-cli dist.tarball | xargs curl | tar -xz
@@ -43,6 +43,9 @@ cd ~/fabric-dev-servers
 export FABRIC_VERSION=hlfv12
 ./startFabric.sh
 ./createPeerAdminCard.sh
+
+[stop]
+./stopFabric.sh
 ```
 - Start the web app ("Playground")
 ```
