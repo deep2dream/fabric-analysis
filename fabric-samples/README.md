@@ -6,9 +6,9 @@ version| sample| support
 #### BUILD FROM CODE
 ```
 $ cd github.com//hyperledger/fabric
-github.com//hyperledger/fabric $ git checkout v2.3.0
-github.com//hyperledger/fabric $ make docker
-github.com//hyperledger/fabric $ make configtxgen\
+github.com//hyperledger/fabric# git checkout v2.3.0
+github.com//hyperledger/fabric# make docker
+github.com//hyperledger/fabric# make configtxgen\
                                     configtxlator\
                                     cryptogen\
                                     discover\
@@ -18,6 +18,12 @@ github.com//hyperledger/fabric $ make configtxgen\
                                     peer\
                                     fabric-ca-client\
                                     fabric-ca-server
+                                    
+github.com//hyperledger/fabric# make dist
+github.com//hyperledger/fabric# mv build/bin/ ../fabric-samples/
+github.com//hyperledger/fabric# cp -rf release/linux-amd64/config/ ../fabric-samples/
+github/hyperledger/fabric-samples# export PATH=$PATH:`pwd`/bin
+github/hyperledger/fabric-samples/test-network# 
 ```
 #### DOWNLOAD
 ```
