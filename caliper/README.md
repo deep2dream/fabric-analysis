@@ -66,11 +66,16 @@ user@ubuntu:~/caliper-benchmarks$ npx caliper bind \
     --caliper-bind-sut fabric:1.4
 user@ubuntu:~/caliper-benchmarks$ cp /media/gustav/Investigation/github.com/hyperledger/fabric/scripts/fabric-samples/balance-transfer/artifacts/channel/mychannel.tx ./networks/fabric/config_solo
 user@ubuntu:~/caliper-benchmarks$ npm audit fix
-user@ubuntu:~/caliper-benchmarks$ export FABRIC_VERSION=1.4.1; export FABRIC_CA_VERSION=1.4.1;docker-compose -f networks/fabric/docker-compose/2org1peergoleveldb_kafka/docker-compose.yaml up -d
 user@ubuntu:~/caliper-benchmarks$ npx caliper launch manager \
     --caliper-workspace . \
     --caliper-benchconfig benchmarks/scenario/simple/config.yaml \
     --caliper-networkconfig networks/fabric/v1/v1.4.1/2org1peergoleveldb/fabric-go.yaml
+(1.4.0-kafka)
+user@ubuntu:~/caliper-benchmarks$ npx caliper launch manager \
+    --caliper-workspace . \
+    --caliper-benchconfig benchmarks/scenario/simple/config.yaml \
+    --caliper-networkconfig networks/fabric/v1/v1.4.0/2org1peergoleveldb_kafka/fabric-go.yaml
+
 (2.1)
 user@ubuntu:~/caliper-benchmarks$ npx caliper bind \
     --caliper-bind-sut fabric:2.1.0 --caliper-bind-args=-g
@@ -102,6 +107,9 @@ caliper:
     command:
         start: echo 'start'
         end: docker-compose -f networks/fabric/docker-compose/2org1peergoleveldb_kafka/docker-compose.yaml down;(test -z \"$(docker ps -aq)\") || docker rm $(docker ps -aq);(test -z \"$(docker images dev* -q)\") || docker rmi $(docker images dev* -q);rm -rf /tmp/hfc-*
+        
+[Failed to enroll admin ](https://github.com/hyperledger/caliper-benchmarks/issues/118)
+sudo chmod 666 /var/run/docker.sock
 ```
 ##### [global npm](https://hyperledger.github.io/caliper/v0.4.2/installing-caliper/#global-npm-install)
 ```
