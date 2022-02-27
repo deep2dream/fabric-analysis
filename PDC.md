@@ -1,3 +1,6 @@
+```
+To create a private data collection, a peer creates a private data definition during chaincode instantiation. 
+```
 ### Private Data Collection
 - https://kctheservant.medium.com/private-data-and-transient-data-in-hyperledger-fabric-46b5258f391e
 ### Go 
